@@ -16,7 +16,7 @@ body {
 
 .container {
   display: flex;
-  width: 90vh;
+  width: 100vh;
 }
 
 .panel {
@@ -31,7 +31,6 @@ body {
   margin: 10px;
   position: relative;
   transition: flex 0.7s ease-in;
-  border: 1.5px solid transparent;
   object-fit: contain;
 }
 
@@ -46,8 +45,7 @@ body {
 }
 
 .panel.active {
-  flex: 5;
-  border: 1.5px solid black;
+  flex: 8;
 }
 
 .panel.active h3 {
@@ -56,10 +54,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .container {
-    width: 100vw;
-  }
-
   .panel:nth-of-type(4),
   .panel:nth-of-type(5) {
     display: none;
