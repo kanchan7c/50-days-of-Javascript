@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 500px;
+}
+
+.progress {
+  background-color: #2196f3;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.progress-container::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  background-color: #9e9e9e;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  z-index: -2;
+}
+
+.circle {
+  padding: 5px 10px;
+  z-index: 4;
+  background-color: white;
+  border-radius: 100%;
+  border: 3px solid #9e9e9e;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: #2196f3;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+  background-color: #2196f3;
+  cursor: pointer;
+  font-family: inherit;
+  color: whitesmoke;
+}
+
+.btn:disabled {
+  background-color: rgb(182, 179, 179);
+  color: grey;
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  background-color: #278adb;
+}
+
+.btn:hover:disabled {
+  background-color: rgb(182, 179, 179);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
